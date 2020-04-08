@@ -23,17 +23,17 @@ function setGradient() {
 }
 
 function setRandomColor() {
-    var genColor = Math.floor(Math.random()*16777215).toString(16);
+    var genColor = Math.floor(Math.random()*16777215).toString(16);;
+    var genColor2 =Math.floor(Math.random()*12345678).toString(16);;
     body.style.background = 
-    "linear-gradient(to right, "
-    + "#" + genColor
-    + ", " 
-    + "#" + genColor
-    + ")";    
-    body.style.innerHTML = "#" + genColor;
+        "linear-gradient(to right, "
+        + "#" + genColor
+        + ", " 
+        + "#" + genColor2
+        + ")";
+        
+        css.innerHTML = body.style.background + "#"+ genColor + "," + "#" + genColor2;
 }
-console.log(setRandomColor);
-
 color1.addEventListener("input", setGradient);
 color2.addEventListener("input", setGradient);
 randomColor.addEventListener("click", setRandomColor);
